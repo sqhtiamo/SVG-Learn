@@ -34,7 +34,7 @@ points：一系列的用空格，逗号，换行符等分隔开的点。"0 0, 1 
 路径 - path元素
 d：一系列绘制指令和绘制参数(点)组合成。
 绝对坐标绘制指令
-M(move)        x y      M20,230
+M(move)        x y      M20,230 \n
 L(line)        x y
 H(horizantal)  x
 V(vertical)    y
