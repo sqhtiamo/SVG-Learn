@@ -32,18 +32,25 @@ points：一系列的用空格，逗号，换行符等分隔开的点。"0 0, 1 
 points：一系列的用空格，逗号，换行符等分隔开的点。"0 0, 1 1, 2 2"。
 
 路径 - path元素
-d：一系列绘制指令和绘制参数(点)组合成。
+d：一系列绘制指令和绘制参数(点)组合成。<br>
+绝对坐标绘制指令 <br>
+M(move)        x y   <br>
+L(line)        x y   <br>
+H(horizantal)  x     <br>
+V(vertical)    y     <br>
+A(Arc)         rx ry xar lf sf x y  <br>
+(x半轴长 y半轴长 椭圆x轴与水平方向夹角 1大弧0小弧 1顺0逆) <br>
+C              x1 y1 x2 y2 x y   三次贝塞尔曲线 <br>
+S   <br>
+Q   <br>
+T   <br>
+Z   封闭曲线 <br>
+
 绝对坐标绘制指令
-M(move)        x y      M20,230 \n
-L(line)        x y
-H(horizantal)  x
-V(vertical)    y
-A(Arc)         rx ry xar lf sf x y 
-(x半轴长 y半轴长 椭圆x轴与水平方向夹角 1大弧0小弧 1顺0逆)
-C              x1 y1 x2 y2 x y   三次贝塞尔曲线
-S
-Q
-T
-Z                                封闭曲线
-参考文献:
-1. http://www.cnblogs.com/dxy1982/archive/2012/04/06/2395729.html
+命令为小写
+
+SVG path绘制注意事项：
+绘制带孔的图形时要注意：外层边的绘制需要是逆时针顺序的，里面的洞的边的顺序必须是顺时针的。只有这样绘制的图形填充效果才会正确。<br>
+
+参考文献:<br>
+1. http://www.cnblogs.com/dxy1982/archive/2012/04/06/2395729.html<br>
