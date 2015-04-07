@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D3 test</title>
+    <script src="js/d3.min.js"></script>
+</head>
+<body>
+	<div id="graph"></div>
+</body>
+<script type="text/javascript">
+var g = d3.select('#graph')
+            .append('svg')
+            .attr('width',400)
+            .attr('height',400);
+
+var line = g.append('line')
+            .attr('x1',100)
+            .attr('y1',100)
+            .attr('x2',200)
+            .attr('y2',200)
+            .attr('style','stroke:rgb(99,99,99);stroke-width:2');
+var rect = g.append('rect')
+			.attr('x', 100)
+			.attr('y', 100)
+			.attr('width', 100)
+			.attr('height', 100)
+			.attr('rx', 30)
+			.attr('ry', 40)
+			.attr('fill', 'blue')
+			.attr('fill-opacity', 0.5)
+var circle = g.append('circle')
+			.attr('cx', 150)
+			.attr('cy', 150)
+			.attr('r', 50)
+			.attr('fill', 'red')
+			.attr('fill-opacity', 0.3)	
+var ellipse = g.append('ellipse')
+			.attr('cx', 150)
+			.attr('cy', 150)
+			.attr('rx', 100)
+			.attr('ry', 30)
+			.attr('fill', 'green')
+			.attr('fill-opacity', 0.7)	
+var pointsPolyline = "40 30 100 200 30 100"
+var polyline = g.append('polyline')
+			.attr('points', pointsPolyline)
+			.attr('stroke', 'green')	
+
+var d = 'M153 334 C153 334 151 334 151 334 C151 339 153 344 156 344 C164 344 171 339 171 334 C171 322 164 314 156 314 C142 314 131 322 131 334 C131 350 142 364 156 364 C175 364 191 350 191 334 C191 311 175 294 156 294 C131 294 111 311 111 334 C111 361 131 384 156 384 C186 384 211 361 211 334 C211 300 186 274 156 274';
+
+var path = g.append('path')
+        .attr('d',d)
+        .attr('style', 'fill:white;stroke:red;stroke-width:2');
+</script>
+</html>
