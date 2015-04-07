@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     version="1.1" width="5cm" height="5cm">
+     version="1.1" width="100%" height="100%">
   <desc>Two groups, each of two rectangles</desc>
   <g id="group1" fill="red">
     <rect x="1cm" y="1cm" width="1cm" height="1cm"/>
@@ -9,8 +9,39 @@
     <rect x="1cm" y="3cm" width="1cm" height="1cm"/>
     <rect x="3cm" y="3cm" width="1cm" height="1cm"/>
   </g>
-
   <!-- Show outline of canvas using 'rect' element -->
   <rect x=".01cm" y=".01cm" width="4.98cm" height="4.98cm"
         fill="none" stroke="blue" stroke-width=".02cm"/>
+
+  <desc>Two groups, each of two rectangles2</desc>
+  <symbol id="group3" fill="green">
+    <rect x="6.41cm" y="1cm" width="1cm" height="1cm"/>
+    <rect x="8.41cm" y="1cm" width="1cm" height="1cm"/>
+  </symbol>
+  <g id="group4" fill="blue">
+    <rect x="6.41cm" y="3cm" width="1cm" height="1cm"/>
+    <rect x="8.41cm" y="3cm" width="1cm" height="1cm"/>
+  </g>
+  <use xlink:href="#group3" target="_blank" rel="nofollow">
+  </use>
+  <rect x="5.5cm" y="0.01cm" width="4.96cm" height="4.96cm"
+      fill-opacity="0" stroke="blue" stroke-width=".02cm"/>
+
+  <desc>Local URI references within ancestor's 'defs' element.</desc>
+  <defs>
+    <linearGradient id="Gradient01">
+      <stop offset="20%" stop-color="#39F" />
+      <stop offset="90%" stop-color="#F3F" />
+    </linearGradient>
+  </defs>
+  <rect x="11cm" y="1cm" width="5cm" height="1cm" 
+        fill="url(#Gradient01)"  />
+
+  <desc>Example Use01 - Simple case of 'use' on a 'rect'</desc>
+  <defs>
+    <rect id="MyRect" width="60" height="10"/>
+  </defs>
+  <rect x=".1" y=".1" width="99.8" height="29.8"
+        fill="none" stroke="blue" stroke-width=".2" />
+  <use x="16.5cm" y="2cm" xlink:href="#MyRect" />
 </svg>
